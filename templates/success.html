@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Reports Generated Successfully!</h2>
+        <div class="text-center mt-4">
+            <!-- <a href="{{ skill_chart }}" download class="btn btn-success">Download Skill Chart</a>
+            <a href="{{ performance_meter }}" download class="btn btn-success">Download Performance Meter</a> -->
+            <a href="{{ url_for('download_all_reports') }}" download class="btn btn-primary mt-3">Download All Reports</a>
+        </div>
+    </div>
+</body>
+</html>

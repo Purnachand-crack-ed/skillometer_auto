@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ name }}'s Certificate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .certificate {
+      width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .header p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+    }
+    .left-section {
+      width: 60%;
+    }
+    .skill-scale {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .skill-scale h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .skill-scale img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .personality {
+      margin-top: 20px;
+    }
+    .personality h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .right-section {
+      width: 35%;
+      text-align: center;
+    }
+    .photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #ddd;
+      margin: 0 auto 10px;
+    }
+    .skill-o-meter {
+      margin-top: 20px;
+    }
+    .skill-o-meter h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .skill-o-meter img {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+    }
+    .footer {
+      display: flex; /* Use flexbox for footer layout */
+      justify-content: space-between; /* Space items evenly */
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <div class="header">
+      <h1>{{ name }}</h1>
+      <p>MBA | Enrolment No.: {{ enrolment_no }}</p>
+      <p>Soft Skills and Personality Development</p>
+      <p>In association with IIIM, Jaipur</p>
+    </div>
+
+    <div class="content">
+      <div class="left-section">
+        <div class="skill-scale">
+          <h3>Skill Scale</h3>
+          <img src="{{ skill_chart }}" alt="Skill Scale Chart">
+        </div>
+
+        <div class="personality">
+          <h3>Personality Quotient</h3>
+          <p>You are a <strong>{{ personality_name }}</strong></p>
+          <p>{{ personality_description }}</p>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="photo" style="background-image: url('{{ picture }}');"></div>
+        <div class="skill-o-meter">
+          <h3>Overall Skill-O-Meter</h3>
+          <img src="{{ performance_meter }}" alt="Overall Performance Chart">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Aptitude Score: {{ aptitude }}</p>
+      <p>Debojit Sen, Founder, Crack-ED</p>
+      <p>Issued Date: {{ cert_date }}</p>
+    </div>
+  </div>
+</body>
+</html>
